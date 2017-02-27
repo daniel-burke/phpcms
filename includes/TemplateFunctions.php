@@ -107,7 +107,7 @@ class TemplateFunctions extends Base{
 		// fetch app and function name
 		$destination = $routes->get_destination();
 
-		$app_name = split('@',$destination['control']);
+		$app_name = explode('@',$destination['control']);
 
 		require_once('applications/'.$app_name[0].'/'.$app_name[0].'.php');
 		$application=ucfirst($app_name[0]).'Application';
